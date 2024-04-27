@@ -14,10 +14,11 @@ import { server, app } from './socket/socket.io.js';
 
 
 
+const __dirname = path.resolve();
+
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
-
 
 app.use(express.json());
 app.use(cookieParser());
@@ -28,7 +29,11 @@ app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/message', messageRoute)
 
+app.use(express.static(path.join(__dirname, "/frontend/dist")))
 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"))
+})
 
 
 server.listen(PORT, () => {
