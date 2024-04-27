@@ -1,0 +1,69 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; 
+
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #1e1e1e;
+  --text-color-dark: #ffffff;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+@media(max-width: 480px){
+  .parent{
+    max-width: 480px;
+  }
+}
+
+@media(min-width: 480px){
+  .parent{
+    min-width: 480px;
+  }
+}
+
+@media(min-width: 640px){
+  .parent{
+    min-width: 640px;
+  }
+
+  .signup{
+    width: 50%;
+  }
+
+  .input{
+    padding: 15px;
+  }
+
+  .user-detail{
+    width: calc(100% - 10%);
+  }
+}
+
+@media(min-width: 780px){
+  .parent{
+    min-width: 780px;
+  }
+
+  .signup{
+    width: 50%;
+  }
+
+  .user-detail{
+    width: calc(100% - 10%);
+  }
+}
+
+@media(min-width: 1030px){
+  .parent{
+    min-width: 980px;
+    display: none;
+  }
+
+  .signup{
+    width: 50%;
+  }
+} 

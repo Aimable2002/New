@@ -1,0 +1,96 @@
+.parent-container{
+    position: relative;
+    display: flex;
+    min-width: 80vw;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+.header-account{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #09B391;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 9vh;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.user{
+    display: flex;
+    position: relative;
+    margin-top: 8vh;
+    min-width: 100%;
+    /* padding-left: 4px; */
+}
+.ac-pc{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* margin-left: 10px; */
+}
+.pple{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    background-color: #09B391;
+}
+.custom-btn:checked {
+    background-color: #09B391;
+}
+
+.psn-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 2px;
+    position: relative;
+    /* padding: 5px; */
+}
+
+.grd-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5px;
+    padding: 3px;
+    align-items: center;
+}
+.footer-icon{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    bottom: 0;
+    padding: 5px;
+    position: fixed;
+    justify-content: space-around;
+    background-color: #09B391;
+}
+.up-icon{
+    position: absolute;
+    margin-top: -20px;
+    background-color: #09B391;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
