@@ -11,7 +11,7 @@ import messageRoute from './Router/messageRouter.js'
 import uploadRouter from './Router/uploadRoute.js'
 
 import { server, app } from './socket/socket.io.js';
-import downloadRoute from './Router/downloadRoute.js'
+//import downloadRoute from './Router/downloadRoute.js'
 
 
 
@@ -31,7 +31,7 @@ app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/message', messageRoute)
 app.use('/api/upload', uploadRouter)
-app.use('/api/download', downloadRoute)
+//app.use('/api/download', downloadRoute)
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")))
 
