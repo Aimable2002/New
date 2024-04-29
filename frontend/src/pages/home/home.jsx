@@ -150,12 +150,14 @@ const handleSearch = (e) => {
           <div className='user-div'>
             <div className='user-pc'>
 
-            <div className="avatar">
+            {/* <div className="avatar">
             <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img src={user.avatar} />
             </div>
-            </div>
-
+            </div> */}
+            <Avatar className='avatar'
+                      alt="Remy Sharp" 
+                      src={user.avatar} sx={{ width: 46, height: 46 }} />
             </div>
             <div className='user-detail'>
               <div className='user-name'>
@@ -186,7 +188,7 @@ const handleSearch = (e) => {
 
        <div className='header' style={{zIndex: '1'}}>
          <div className='head-content'>
-           <div>Welcome user</div>
+           {loggedUser.map((log) => ( <div style={{color: '#09B391'}}> Welcome {log.userName}</div>))}
            <div className='drop-call'>
             <div onClick={handleCall}>{isCall ? <CloseRoundedIcon /> : <CallEndRoundedIcon />}</div>
             {isCall && (
@@ -215,7 +217,7 @@ const handleSearch = (e) => {
 
                     {/* <Avatar
                     alt='user-pc'
-                    src='18+.jpg'
+                    src={log.avatar}
                     sx={{width: 56, height: 56}} /> */}
                   </div>
                   <div className='menu-username' style={{fontWeight: '100'}}>{log.userName}</div>
@@ -286,15 +288,15 @@ const handleSearch = (e) => {
           
 
       
-       <div className='search-div'>
-        <form action="" onSubmit={handleSearch}  style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+       <div className='search-div' onSubmit={handleSearch}  style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        {/* <form action="" > */}
          <input 
          type="search" 
          placeholder='Type to search'
          value={search}
          onChange={(e) => setSearch(e.target.value)} />
-         <button type='submit'>search</button>
-         </form>
+         {/* <button type='submit'>search</button> */}
+         {/* </form> */}
        </div>
        
        <div className='story-area'>

@@ -10,10 +10,10 @@ const uploadRequest = () => {
         const formData = new FormData();
         formData.append('file', file)
         console.log('file on frontend :', file)
-        const res = await axios.post('http://localhost:8000/api/uploadProfile/uploadProfile', 
+        const res = await axios.post('http://localhost:8000/api/upload/uploadProfile', 
         formData,{
         headers: {
-          Authorization: `Bearer ${JSON.parse(token).token}`
+          Authorization: `${JSON.parse(token).token}`
         }
     })
         const data = res.data;

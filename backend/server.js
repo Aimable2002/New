@@ -8,8 +8,10 @@ import authRoute from './Router/authRouter.js';
 import connectDB from './Model/db/connectDB.js'
 import userRoute from './Router/userRoute.js'
 import messageRoute from './Router/messageRouter.js'
+import uploadRouter from './Router/uploadRoute.js'
 
 import { server, app } from './socket/socket.io.js';
+import downloadRoute from './Router/downloadRoute.js'
 
 
 
@@ -28,6 +30,8 @@ app.use(cors())
 app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/message', messageRoute)
+app.use('/api/upload', uploadRouter)
+app.use('/api/download', downloadRoute)
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")))
 
