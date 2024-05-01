@@ -18,7 +18,7 @@ const useGetUsers = () => {
             if(!token){
                 throw new Error("no token found", error.message)
             }
-            const res = await axios.get("http://localhost:8000/api/users/getUser", {
+            const res = await axios.get("https://chatapp-na06.onrender.com/api/users/getUser", {
                 headers: {
                     Authorization: `${JSON.parse(token).token}`
                 }

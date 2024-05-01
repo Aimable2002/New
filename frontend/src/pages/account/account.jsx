@@ -93,13 +93,56 @@ const Account = () => {
       <div style={{fontSize: '25px'}}><MdFeaturedVideo /></div>
       <div style={{fontSize: '25px'}}><MdFeaturedVideo /></div>
     </div>
-    <div className="grid grid-cols-2 gap-4 mt-2">
+    <div className="grid grid-cols-4 gap-2 mt-2">
       
-  {users.map((log, idx) => (
+  {/* {users.map((log, idx) => (
     <div key={idx}>
       <img src={log.avatar} alt="" />
     </div>
-  ))}
+  ))} */}
+
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+
+
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
+<div className="avatar">
+  <div className="w-24 rounded">
+    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  </div>
+</div>
   
 </div>
 

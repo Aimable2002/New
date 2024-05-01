@@ -12,7 +12,7 @@ const {selectedUser, setMessages, messages} = Conversation();
         setLoading(true)
         try{
             const token = localStorage.getItem('online-user')
-            const res = await axios.get(`http://localhost:8000/api/message/${selectedUser._id}`,{
+            const res = await axios.get(`https://chatapp-na06.onrender.com/api/message/${selectedUser._id}`,{
                 headers: {
                     Authorization: ` ${JSON.parse(token).token}`
                 }

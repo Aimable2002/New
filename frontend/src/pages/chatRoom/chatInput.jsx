@@ -24,9 +24,9 @@ import { BsSendFill } from "react-icons/bs";
     //  <div className='footer-icon'>
     <div style={{display: 'flex', bottom: '0', position: 'fixed', width: '100%', alignItems: 'center',
     justifyContent: 'center', padding: '10px'}}>
-      <div style={{display: 'flex', width: '90%', background: '#375487',  padding: '10px', borderRadius: '20px'}}>
-   <div><FileCopyRoundedIcon /></div>
-   <div>
+      <div style={{display: 'flex', width: '100%', background: '#375487',  padding: '10px', borderRadius: '20px'}}>
+   <div><FileCopyRoundedIcon style={{fontSize: '20px'}}/></div>
+   <div style={{width: '100%'}}>
      <form action="" onSubmit={handlesubmit} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
        <textarea 
          name="" 
@@ -34,17 +34,18 @@ import { BsSendFill } from "react-icons/bs";
          cols="30" 
          placeholder='start typing'
          style={{paddingLeft: '10px', background: 'transparent'}}
-         className='text-white'
+         className='text-white w-full'
          rows="1" 
          value={message}
          onChange={(e) => setMessages(e.target.value)}
        ></textarea>
         <button type='submit'> 
-      { loading ? <span className='loading loading-spinner'></span> : <BsSendFill /> } 
+      { loading ? <span className='loading loading-spinner'></span> : <BsSendFill style={{fontSize: '20px'}}/> } 
    </button>
      </form>
    </div> 
    </div>
+   
  </div> 
    )
  }

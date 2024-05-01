@@ -1,0 +1,69 @@
+.footer-icon1{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    bottom: 0;
+    padding: 5px;
+    position: fixed;
+    justify-content: space-around;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #09B391;
+    border-radius: 20px;
+}
+.stry{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    z-index: -1;
+}
+
+
+
+.header-p{
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    min-height: 9vh;
+    position: relative;
+    z-index: 1;
+}
+
+.my-btn{
+    background-color: #8e9392;
+    /* border: 1px solid #09B391; */
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.my-btn-not{
+    /* background-color: #8e9392; */
+    border: 1px solid #09B391;
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.my-btn2{
+    /* background-color: #8e9392; */
+    /* background-color: #09B391; */
+    border: 1px solid #09B391;
+    padding: 4px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    align-items: center;
+}
+.poster{
+    z-index: -1;
+}

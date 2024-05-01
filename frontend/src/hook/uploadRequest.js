@@ -10,7 +10,7 @@ const uploadRequest = () => {
         const formData = new FormData();
         formData.append('file', file)
         console.log('file on frontend :', file)
-        const res = await axios.post('http://localhost:8000/api/upload/uploadProfile', 
+        const res = await axios.post('https://chatapp-na06.onrender.com/api/upload/uploadProfile', 
         formData,{
         headers: {
           Authorization: `${JSON.parse(token).token}`

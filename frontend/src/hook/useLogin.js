@@ -7,7 +7,7 @@ const useLogin = () => {
   const login = async ({userName, password}) => {
     setLoading(true)
     try{
-        const res = await axios.post('http://localhost:8000/api/auth/login', {
+        const res = await axios.post('https://chatapp-na06.onrender.com/api/auth/login', {
             userName, password
         });
 

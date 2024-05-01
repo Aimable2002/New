@@ -1,12 +1,14 @@
 .home-content{
     position: relative;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    width: 100vw;
+    min-width: 100vw;
     height: 100vh;
     overflow: auto;
     z-index: 1;
 }
+
+
 
 .header{
     display: flex;
@@ -45,8 +47,8 @@
     min-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: 'center'
 }
-
 .search-div input{
     min-width: 99%;
     border: none;
@@ -66,7 +68,12 @@
     position: relative;
     min-width: 100%;
     padding: 10px;
-}
+} 
+
+                                           /*not displayed*/
+
+
+
 /* .story-area{
     display: flex;
     min-width: 100%;
@@ -110,7 +117,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+}
+*/
+
+
+                                                      /* above is not touched */
+
 .explore{
     text-align: right;
     display: flex;
@@ -134,7 +146,7 @@
     gap: 20px;
     align-items: center;
     box-shadow: 0px, 0px, 4px,0px;
-    /* padding: 10px; */
+    
 }
 .user-detail{
     display: flex;
@@ -163,18 +175,18 @@
 
 .footer-icon{
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-direction: row;
     bottom: 0;
     padding: 5px;
     position: fixed;
     justify-content: space-around;
-    background-color: #09B391;
+    /* background-color: #09B391; */
 }
 .up-icon{
     position: absolute;
     margin-top: -20px;
-    background-color: #09B391;
+    /* background-color: #09B391; */
     padding: 5px;
     border-radius: 50%;
     display: flex;
@@ -208,7 +220,7 @@
     left: -200px;
     min-height: 100vh;
     z-index: 1;
-    /* display: none; */
+   
     
 }
 
@@ -244,4 +256,37 @@
     width: 100px;
     justify-content: space-between;
     left: -35px;
+}  
+
+
+
+                                                          /* below codes is xl-large device */
+
+
+.xl-header{
+    width: 100vw;
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    z-index: 1;
+    position: fixed;
 }
+
+/* .not-move{
+    position: relative;
+    width: 100vw;
+    z-index: 0;
+} */
+.column{
+    /* background-color: #09B391; */
+    z-index: 1000;
+    overflow-y: auto;
+    z-index: 0;
+    grid-column: calc(100%);
+}
+.column:hover{
+    overflow-y: auto;
+}
+/* .fst-col{
+    background-color: blue;
+} */

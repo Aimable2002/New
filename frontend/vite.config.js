@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5000,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://chatapp-na06.onrender.com',
         changeOrigin: true,
       }
     }

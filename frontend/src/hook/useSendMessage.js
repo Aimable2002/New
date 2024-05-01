@@ -12,7 +12,7 @@ const useSendMessage = () => {
     try{
       const token = localStorage.getItem('online-user');
 
-      const res = await axios.post(`http://localhost:8000/api/message/send/${selectedUser._id}`,{message}, {
+      const res = await axios.post(`https://chatapp-na06.onrender.com/api/message/send/${selectedUser._id}`,{message}, {
         headers: {
           Authorization: ` ${JSON.parse(token).token}`
         },

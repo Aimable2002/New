@@ -42,19 +42,12 @@ const chatRoom = () => {
   const navigate = useNavigate();
   const resetBack = () => {
     localStorage.removeItem('selectedUser')
-    setUser(null)
+    setUser(null);
     navigate('/')
     
   }
-  // useEffect(() => {
-  //   return () => {
-  //     resetBack();
-  //   }
-  // },[])
 
-  
-
-
+ 
   const {onlineUser} = useSocketContext();
   const isOnline = onlineUser.includes(selectedUser?._id)
 

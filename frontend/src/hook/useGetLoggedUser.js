@@ -13,7 +13,7 @@ const useLoggedUser = () => {
             if(!token){
                 throw new Error("no token found", error.message)
             }
-            const res = await axios.get("http://localhost:8000/api/users/getLoggedOne", {
+            const res = await axios.get("https://chatapp-na06.onrender.com/api/users/getLoggedOne", {
                 headers: {
                     Authorization: ` ${JSON.parse(token).token}`
                 }

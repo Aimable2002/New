@@ -62,14 +62,14 @@
 
 
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Conversation from '../zustand/zustand'
 import useGetMessages from '../../hook/useGetMessages';
 //import useListenMessage from '../../hook/useListenMessage';
 
 
  const message = () => {
-   const { selectedUser } = Conversation();
+   const { selectedUser, setUser } = Conversation();
    const { loading, messages } = useGetMessages();
    //useListenMessage();
    console.log("messages : ", messages)
@@ -81,17 +81,18 @@ import useGetMessages from '../../hook/useGetMessages';
    const recieverIdStored = localStorage.getItem('selectedUser');
    const reciever = recieverIdStored ? JSON.parse(recieverIdStored) : null;
    const recieverId = reciever ? reciever._id : null;
+  
 
    if (loading) {
      return <div>Loading...</div>;
    }
 
-   else if (messages.length === 0) {
+   if (messages.length === 0) {
      return <div>Start a conversation</div>;
    }
-   else if (!messages || !Array.isArray(messages)) {
+   if (!messages || !Array.isArray(messages)) {
      return <div>No messages to display</div>;
- }else{
+ }
    return (
      <div>
        {messages.map((message, idx) => { 
@@ -118,6 +119,6 @@ import useGetMessages from '../../hook/useGetMessages';
    
    );
  }
- }
+ 
 
  export default message;
