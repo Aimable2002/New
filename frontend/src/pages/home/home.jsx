@@ -153,14 +153,14 @@ useEffect(() => {
             <div className='user-div'>
               <div className='user-pc'>
 
-                <div className="avatar">
+                {/* <div className="avatar">
                   <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     <img src={user.avatar} />
                   </div>
-                </div>
-           {/* <Avatar className='avatar'
+         </div> */}
+           <Avatar className='avatar'
                      alt="Remy Sharp" 
-                     src={user.avatar} sx={{ width: 46, height: 46 }} /> */}
+                     src={user.avatar} sx={{ width: 46, height: 46 }} />
            </div>
            <div className='user-detail'>
              <div className='user-name'>
@@ -212,16 +212,16 @@ useEffect(() => {
                <div className='menu-profile' style={{marginTop: '30px'}} >
                  <div className='menu-pc'>
                     
-                 <div className="avatar">
+                 {/* <div className="avatar">
                    <div className="w-14 rounded-full">
                      <img src={log.avatar} />
                    </div>
-                 </div>
+                 </div> */}
 
-                   {/* <Avatar
+                   <Avatar
                    alt='user-pc'
                    src={log.avatar}
-                   sx={{width: 56, height: 56}} /> */}
+                   sx={{width: 56, height: 56}} />
                  </div>
                  <div className='menu-username' style={{fontWeight: '100'}}>{log.userName}</div>
                </div>
@@ -306,11 +306,15 @@ useEffect(() => {
        <div className='story-flow'>
          {users.map((user, idx) => (
            <div key={idx} className='story-here ' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-           <div className="avatar px-2">
+           {/* <div className="avatar px-2">
              <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                <img src={user.avatar} />
              </div>
-           </div>
+           </div> */}
+           <Avatar
+                   alt='user-pc'
+                   src={user.avatar}
+                   sx={{width: 56, height: 56}} />
          <div className='story-owner'>{truncateString(user.userName, 5)}</div>
            </div>
          ))}
@@ -333,11 +337,17 @@ useEffect(() => {
           
          <div className='user-pc'>
 
-          <div className={`avatar ${user.isOnline ? 'online' : 'offline'}`}>
+          {/* <div className={`avatar ${user.isOnline ? 'online' : 'offline'}`}>
            <div className="w-12 rounded-full">
              <img src={user.avatar} />
            </div>
-           </div>
+           </div> */}
+
+              <Avatar
+              className={`avatar ${user.isOnline ? 'online' : 'offline'}`}
+                   alt='user-pc'
+                   src={log.avatar}
+                   sx={{width: 56, height: 56}} />
            
          </div>
          {/* {messages.map((message, idx) => ( */}
