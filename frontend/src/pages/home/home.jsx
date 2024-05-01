@@ -346,7 +346,7 @@ useEffect(() => {
               <Avatar
               className={`avatar ${user.isOnline ? 'online' : 'offline'}`}
                    alt='user-pc'
-                   src={log.avatar}
+                   src={user.avatar}
                    sx={{width: 56, height: 56}} />
            
          </div>
