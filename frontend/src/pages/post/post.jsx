@@ -41,7 +41,7 @@ import SendIcon from '@mui/icons-material/Send';
 import message from '../chatRoom/message.jsx';
 import useSendMessage from '../../hook/useSendMessage.js';
 import { Avatar } from '@mui/material';
-
+import { Button } from '@nextui-org/react';
 
 
 const truncateString = (str, maxLength) => {
@@ -237,21 +237,43 @@ const handleSend = async(user) => {
 
       <div style={{zIndex: '-1', marginLeft: '4px', fontFamily: 'sans-selif', fontWeight: '500', fontSize: '20px'}}>categories</div>
 
-      <div className='flex flex-row gap-1 overflow-x-auto mt-1'>
+      <div className='flex flex-row gap-1 overflow-x-auto mt-1' style={{
+        display: 'flex',
+        flexDirection: 'row',
+        overflowX: 'auto',
+        marginTop: '4px'
+      }}>
 
-        <div onClick={handleClick}><button className={isClicked ? `my-btn` : 'my-btn-not'}>Popular</button></div>
-        <div onClick={handleClick1}><button className={isClicked1 ? `my-btn` : 'my-btn-not'}>Trend</button></div>
-        <div onClick={handleClick2}><button className={isClicked2 ? `my-btn` : 'my-btn-not'}>Hottie</button></div>
-        <div onClick={handleClick3}><button className={isClicked3 ? `my-btn` : 'my-btn-not'}>Available</button></div>
-        <div onClick={handleClick4}><button className={isClicked4 ? `my-btn` : 'my-btn-not'}>Event</button></div>
+        <div onClick={handleClick}><Button className={isClicked ? `my-btn` : 'my-btn-not'}>Popular</Button></div>
+        <div onClick={handleClick1}><Button className={isClicked1 ? `my-btn` : 'my-btn-not'}>Trend</Button></div>
+        <div onClick={handleClick2}><Button className={isClicked2 ? `my-btn` : 'my-btn-not'}>Hottie</Button></div>
+        <div onClick={handleClick3}><Button className={isClicked3 ? `my-btn` : 'my-btn-not'}>Available</Button></div>
+        <div onClick={handleClick4}><Button className={isClicked4 ? `my-btn` : 'my-btn-not'}>Event</Button></div>
 
       </div>
 
       <div className='poster'>
         {users.map((user) => (
-        <div className='crd flex flex-col align-middle'>
-          <div className='crd-d flex flex-row align-middle justify-between py-2'>
-            <div className='crd-pc flex flex-row align-middle gap-3'>
+        <div className='crd flex flex-col align-middle' style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
+          <div className='crd-d flex flex-row align-middle justify-between py-2' style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            paddingTop: '8px',
+            paddingBottom: '8px',
+            width: '100%'
+          }}>
+            <div className='crd-pc flex flex-row align-middle gap-3' style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: '12px'
+            }}>
               {/* <div className="avatar">
                 <div className="w-10 rounded-full">
                   <img src={user.avatar} />
@@ -263,7 +285,11 @@ const handleSend = async(user) => {
             sx={{width: 56, height: 56}} />
               <div className=' self-center'>{user.userName}</div>
             </div>
-            <div className='self-center flex flex-row'>
+            <div className='self-center flex flex-row' style={{
+              display: 'flex',
+              alignSelf: 'center',
+              flexDirection: 'row'
+            }}>
               <div><button className='my-btn2'>subscribe</button></div>
               <div><MoreVertIcon /></div>
             </div>
@@ -274,14 +300,35 @@ const handleSend = async(user) => {
               src="/image/used pc.jpg" alt="poster" />
             </figure>
           </div>
-          <div className='fotter flex flex-col align-middle'>
-            <div className='up flex flex-row align-middle justify-between'>
-              <div className='lft flex flex-row align-middle gap-2'>
+          <div className='fotter flex flex-col align-middle' style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '100%'
+          }}>
+            <div className='up flex flex-row align-middle justify-between' style={{
+              display: 'flex', 
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%'
+            }}>
+              <div className='lft flex flex-row align-middle gap-2' style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '12px'
+              }}>
                 <div><FavoriteBorderIcon /></div>
                 <div><ModeCommentIcon /></div>
                 <div><ShareIcon /></div>
               </div>
-              <div className='rgt flex flex-row align-middle gap-2'>
+              <div className='rgt flex flex-row align-middle gap-2' style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '12px'
+              }}>
                 <div></div>
                 <div onClick={() => handleSendClick(user)}><ForumIcon /></div>
 

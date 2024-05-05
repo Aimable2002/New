@@ -6,6 +6,7 @@ import './index.css'
 import { AuthContextProvider } from './context/authContext.jsx'
 import { ThemContextProvider } from './pages/Theme/themeContext.jsx'
 import { SocketContextProvider } from './context/socketContext.jsx'
+import { NextUIProvider } from '@nextui-org/react'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <AuthContextProvider>
         <ThemContextProvider>
           <SocketContextProvider>
-            <App />
+            <NextUIProvider>
+              <App />
+            </NextUIProvider>
           </SocketContextProvider>
         </ThemContextProvider>
       </AuthContextProvider>
