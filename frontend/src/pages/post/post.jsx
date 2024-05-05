@@ -294,11 +294,15 @@ const handleSend = async(user) => {
               <div><MoreVertIcon /></div>
             </div>
           </div>
-          <div className='pc'>
+          <div className='pc' style={{width: '100%'}}>
+            <div style={{
+              width: '100%'
+            }}>
             <figure>
               <img 
               src="/image/used pc.jpg" alt="poster" />
             </figure>
+            </div>
           </div>
           <div className='fotter flex flex-col align-middle' style={{
             display: 'flex',
