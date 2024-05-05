@@ -82,11 +82,15 @@ const handleFollower = (e) => {
           
          <div className='user-pc'>
 
-         <div className={`avatar ${user.isOnline ? 'online' : 'offline'}`}>
+         {/* <div className={`avatar ${user.isOnline ? 'online' : 'offline'}`}>
            <div className="w-12 rounded-full">
              <img src={user.avatar} />
            </div>
-           </div>
+           </div> */}
+
+<Avatar className='avatar'
+                     alt="Remy Sharp" 
+                     src={user.avatar} sx={{ width: 46, height: 46 }} />
            
          </div>
          {/* {messages.map((message, idx) => ( */}
