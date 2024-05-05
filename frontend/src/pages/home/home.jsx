@@ -36,6 +36,7 @@ import useGetLoggedUser from '../../hook/useGetLoggedUser.js';
 import useListenMessages from '../../hook/useListenMessage.js'
 import LargeScreen from './largeHome.jsx'
 import '../post/post.css'
+import '../account/account.css'
 //import useGetMessages from '../../hook/useGetMessages.js';
 
 const truncateString = (str, maxLength) => {
@@ -137,7 +138,7 @@ useEffect(() => {
 },[])
 
  return (
-   < div className='parent'>
+   < div className='parent-container'>
     {!isLarge ? (
    <div className={`home-content ${!isDark}`}>
    {showExplore ? (

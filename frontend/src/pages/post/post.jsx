@@ -40,7 +40,7 @@ import Conversation from '../zustand/zustand.jsx';
 import SendIcon from '@mui/icons-material/Send';
 import message from '../chatRoom/message.jsx';
 import useSendMessage from '../../hook/useSendMessage.js';
-import e from 'cors';
+import { Avatar } from '@mui/material';
 
 
 
@@ -201,11 +201,15 @@ const handleSend = async(user) => {
         {loggedUser.map((user) => (
         <div className='ownr flex align-middle flex-col'>
 
-          <div className="avatar">
+          {/* <div className="avatar">
             <div className="w-12 rounded-full">
               <img src={user.avatar} />
             </div>
-          </div>
+          </div> */}
+          <Avatar
+            alt='user-pc'
+            src={user.avatar}
+            sx={{width: 56, height: 56}} />
           <div className='flex align-middle justify-center'>Add</div>
         </div>
         ))}
@@ -213,11 +217,16 @@ const handleSend = async(user) => {
         <div key={idx} className='others flex align-middle flex-col'>
 
           
-            <div className="avatar px-1">
+            {/* <div className="avatar px-1">
               <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src={user.avatar} />
               </div>
-            </div>
+            </div> */}
+            <Avatar
+            alt='user-pc'
+            src={user.avatar}
+            sx={{width: 56, height: 56}} />
+
             <div className='flex align-middle justify-center'>{truncateString(user.userName, 5)}</div>
           
 
@@ -243,11 +252,15 @@ const handleSend = async(user) => {
         <div className='crd flex flex-col align-middle'>
           <div className='crd-d flex flex-row align-middle justify-between py-2'>
             <div className='crd-pc flex flex-row align-middle gap-3'>
-              <div className="avatar">
+              {/* <div className="avatar">
                 <div className="w-10 rounded-full">
                   <img src={user.avatar} />
                 </div>
-              </div>
+              </div> */}
+              <Avatar
+            alt='user-pc'
+            src={user.avatar}
+            sx={{width: 56, height: 56}} />
               <div className=' self-center'>{user.userName}</div>
             </div>
             <div className='self-center flex flex-row'>
@@ -258,7 +271,7 @@ const handleSend = async(user) => {
           <div className='pc'>
             <figure>
               <img 
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="poster" />
+              src="/image/used pc.jpg" alt="poster" />
             </figure>
           </div>
           <div className='fotter flex flex-col align-middle'>
