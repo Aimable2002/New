@@ -132,15 +132,15 @@ const handleFollower = (e) => {
          <div className='user-div'>
            <div className='user-pc'>
 
-           <div className="avatar">
+           {/* <div className="avatar">
   <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
     <img src={user.avatar} />
   </div>
-</div>
+</div> */}
 
-           {/* <Avatar className='avatar'
+           <Avatar className='avatar'
                      alt="Remy Sharp" 
-                     src={user.avatar} sx={{ width: 46, height: 46 }} /> */}
+                     src={user.avatar} sx={{ width: 46, height: 46 }} />
            </div>
            <div className='user-detail'>
              <div className='user-name'>

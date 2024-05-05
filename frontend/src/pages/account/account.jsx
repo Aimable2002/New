@@ -14,7 +14,7 @@ import { MdFeaturedVideo } from "react-icons/md";
 import uploadRequest from '../../hook/uploadRequest.js';
 import { BsPlusCircleFill } from "react-icons/bs";
 
-
+import { Avatar } from '@mui/material';
 
 const Account = () => {
 
@@ -48,7 +48,7 @@ const Account = () => {
       
       <div className='user'>
       <div className='ac-pc'>
-        <div className="avatar" onClick={handleProfileClick}>
+        {/* <div className="avatar" onClick={handleProfileClick}>
           <div className="w-20 rounded-full">
             {loggedUser.map((log, idx) => (<img src={log.avatar} />))}
           </div>
@@ -56,8 +56,19 @@ const Account = () => {
           style={{display: 'none'}}
           ref={profileInput}
           onChange={handleFileChange} />
-        </div>
-        <div style={{display: 'flex', position: 'absolute', marginTop: '10vh', fontSize: '18px'}}><BsPlusCircleFill /></div>
+        </div> */}
+
+<input type="file"
+          style={{display: 'none'}}
+          ref={profileInput}
+          onChange={handleFileChange} />
+{loggedUser.map((log) => (
+              <Avatar 
+              onclick={handleProfileClick}
+                   alt='user-pc'
+                   src={log.avatar}
+                   sx={{width: 56, height: 56}} />))}
+        {/* <div style={{display: 'flex', position: 'absolute', marginTop: '10vh', fontSize: '18px'}}><BsPlusCircleFill /></div> */}
         </div> 
         
         <div className='details'>
@@ -101,7 +112,7 @@ const Account = () => {
     </div>
   ))} */}
 
-<div className="avatar">
+{/* <div className="avatar">
   <div className="w-24 rounded">
     <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
@@ -111,38 +122,8 @@ const Account = () => {
     <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
-<div className="avatar">
-  <div className="w-24 rounded">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
-<div className="avatar">
-  <div className="w-24 rounded">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
+ */}
 
-
-<div className="avatar">
-  <div className="w-24 rounded">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
-<div className="avatar">
-  <div className="w-24 rounded">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
-<div className="avatar">
-  <div className="w-24 rounded">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
-<div className="avatar">
-  <div className="w-24 rounded">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
   
 </div>
 
